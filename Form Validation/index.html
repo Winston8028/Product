@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrap warp-sm">
+    <div class="header">
+      <h1>注册</h1>
+    </div>
+    <div class="form">
+      <form id="signup">
+        <div class="input-wrap">
+          <label>姓名</label>
+          <input data-rule='maxlength:5|minlength:1' name="name" type="text" class="input-control">
+          <div id="name-input-error" class="input-error">姓名格式有误</div>
+        </div>
+        <div class="input-wrap">
+          <label>年龄</label>
+          <input data-rule='min:18' name="age" type="text" class="input-control">
+          <div id="age-input-error" class="input-error">年龄格式有误</div>
+        </div>
+        <div class="input-wrap">
+          <label>用户名</label>
+          <input data-rule='pattern:"^a-z0-9*$"|maxlength:18|minlength:4' id="test" name="username" type="text" class="input-control">
+          <div id="username-input-error" class="input-error">用户名格式有误</div>
+        </div>
+        <div class="input-wrap">
+          <label>密码</label>
+          <input data-rule='maxlength:64|minlength:6' name="password" type="password" class="input-control">
+          <div id="password-input-error" class="input-error">密码格式有误</div>
+        </div>
+        <div class="input-wrap">
+          <label>自我介绍</label>
+          <input data-rule='required:false|maxlength:1024' name="username" type="text" name="ziwojieshao" class="input-control">
+          <div id="ziwojieshao-input-error" class="input-error">自我介绍过长</div>
+        </div>
+        <button class="btn-control" type="submit" name="button">提交</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+  <script src="js/validator.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
